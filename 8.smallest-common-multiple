@@ -1,0 +1,30 @@
+function smallestCommons(arr) {
+  if (arr[0]<arr[1]) {
+    arr.reverse();
+  }
+  let arr2 = [];
+  for (let i=arr[0]; i>=arr[1]; --i) {
+    arr2.push(i);
+  }
+  var nok = 0;
+  var loop = 1;
+  var n;
+
+ 
+  do {
+    nok = arr2[0] * loop * arr2[1];
+    for (n = 2; n < arr2.length; n++) {
+      if (nok % arr2[n] !== 0) {
+        break;
+      }
+    }
+
+    loop++;
+  } while (n !== arr2.length);
+
+  return nok;
+}
+ 
+
+
+smallestCommons([1,5]);
