@@ -1,0 +1,22 @@
+function sumAll(arr) {
+arr.sort(function (a,b) {return a-b;});
+let i=arr[0];
+let iMax = i;
+let iSum = 0;
+iSum +=iMax;
+let arr2 = [];
+for (let j=i;j<=arr[1];j++) {
+  arr2.push(j);
+}
+
+
+let result = arr2.reduce((sum,current)=>sum+current,0);
+
+return iSum = result;
+
+
+}
+
+
+sumAll([1, 4]);
+
