@@ -1,0 +1,16 @@
+function sumPrimes(num) {
+  let simpleNum = [];
+  mark1:
+  for (let i=2; i<=num; i++) {
+    for (let j=2; j<i; j++) {
+      if(i%j===0) continue mark1;
+    }
+    simpleNum.push(i);
+    }
+   
+    let sumNum = simpleNum.reduce((sum,next) => sum+next,0);
+    return sumNum;
+}
+
+
+sumPrimes(10);
