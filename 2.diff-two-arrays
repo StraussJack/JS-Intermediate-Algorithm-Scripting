@@ -1,0 +1,15 @@
+function diffArray(arr1, arr2) {
+  let newArr = [];
+  let secArr = [];
+  let twoArr = [];
+  let arrb =[...twoArr.concat(arr1,arr2)];
+  for (let i = 0; i < arrb.length; i++) {
+    if(arr1.includes(arrb[i])&&arr2.includes(arrb[i])){
+   newArr.push(arrb[i])
+  }else{
+    secArr.push(arrb[i])
+  }
+  }
+  return secArr;
+}
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
